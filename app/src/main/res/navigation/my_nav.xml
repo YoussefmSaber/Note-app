@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/MainPageFragment">
+
+    <fragment
+        android:id="@+id/MainPageFragment"
+        android:name="com.example.noteapp.Fragment.MainPageFragment"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/MainPage2AddNote"
+            app:destination="@id/AddingNotesFragment" />
+        <action
+            android:id="@+id/MainPage2UpdateNote"
+            app:destination="@id/UpdateNotesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AddingNotesFragment"
+        android:name="com.example.noteapp.Fragment.AddingNotesFragment"
+        android:label="fragment_adding_notes"
+        tools:layout="@layout/fragment_adding_notes" >
+        <action
+            android:id="@+id/AddingNote2MainPage"
+            app:destination="@id/MainPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/UpdateNotesFragment"
+        android:name="com.example.noteapp.Fragment.UpdateNotesFragment"
+        android:label="fragment_update_notes"
+        tools:layout="@layout/fragment_update_notes" >
+        <action
+            android:id="@+id/UpdateNote2MainPage"
+            app:destination="@id/MainPageFragment" />
+    </fragment>
+</navigation>
