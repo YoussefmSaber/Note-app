@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -8,9 +8,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
-        android:layoutDirection="rtl"
+        android:background="@color/white"
         app:cardCornerRadius="10sp"
-        app:cardElevation="20dp"
+        app:cardElevation="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -18,37 +18,43 @@
         <ImageView
             android:layout_width="17sp"
             android:layout_height="match_parent"
-            android:src="@drawable/light_green_mark"/>
+            android:layout_gravity="end"
+            android:src="@drawable/light_green_mark" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/noteDataLayout"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layoutDirection="ltr"
-            android:padding="10sp"
-            android:layout_height="wrap_content">
+            android:padding="16sp">
+
             <TextView
                 android:id="@+id/noteItemTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:fontFamily="@font/dosis_medium"
-
                 android:text="lorem Ipsum"
+                android:textColor="@color/title_main_page"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/noteItemTitle"
+                android:layout_marginTop="15sp"
+                android:paddingEnd="17sp"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                android:textColor="@color/description_main_page"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
+                app:layout_constraintTop_toBottomOf="@id/noteItemTitle" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </com.google.android.material.card.MaterialCardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
