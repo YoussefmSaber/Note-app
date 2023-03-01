@@ -56,9 +56,10 @@
         tools:listitem="@layout/note_item" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addNoteBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="15sp"
+        android:layout_margin="16sp"
         android:backgroundTint="@color/fab_color"
         android:src="@drawable/ic_add"
         app:borderWidth="0sp"
