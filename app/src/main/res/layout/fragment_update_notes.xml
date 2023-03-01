@@ -1,14 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.UpdateNotesFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:background="@color/page_color"
+    tools:context=".Fragment.AddingNotesFragment">
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/light_green"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="50sp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/titleEditLayout"
+                style="@style/EditTextSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="wrap_content"
+                    android:id="@+id/noteTitleText"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/dosis_semibold"
+                    android:text="Title"
+                    android:textColor="@color/black"
+                    android:textSize="35sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/blueColor"
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:layout_marginStart="32sp"
+                android:layout_marginTop="16sp"
+                android:layout_marginEnd="4sp"
+                android:src="@color/light_blue"
+                app:layout_constraintEnd_toStartOf="@+id/orangeColor"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleEditLayout" />
+
+            <ImageView
+                android:id="@+id/orangeColor"
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:layout_marginStart="4sp"
+                android:layout_marginTop="16sp"
+                android:layout_marginEnd="4sp"
+                android:padding="25sp"
+                android:src="@color/light_orange"
+                app:layout_constraintEnd_toStartOf="@id/greenColor"
+                app:layout_constraintStart_toEndOf="@id/blueColor"
+                app:layout_constraintTop_toBottomOf="@+id/titleEditLayout" />
+
+            <ImageView
+                android:id="@+id/greenColor"
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:layout_marginStart="4sp"
+                android:layout_marginTop="16sp"
+                android:layout_marginEnd="4sp"
+                android:src="@drawable/light_green_mark_notselected"
+                app:layout_constraintEnd_toStartOf="@id/pinkColor"
+                app:layout_constraintStart_toEndOf="@id/orangeColor"
+                app:layout_constraintTop_toBottomOf="@+id/titleEditLayout" />
+
+            <ImageView
+                android:id="@+id/pinkColor"
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:layout_marginStart="4sp"
+                android:layout_marginTop="16sp"
+                android:layout_marginEnd="4sp"
+                android:src="@color/light_pink"
+                app:layout_constraintEnd_toStartOf="@id/purpleColor"
+                app:layout_constraintStart_toEndOf="@id/greenColor"
+                app:layout_constraintTop_toBottomOf="@+id/titleEditLayout" />
+
+            <ImageView
+                android:id="@+id/purpleColor"
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:layout_marginStart="4sp"
+                android:layout_marginTop="16sp"
+                android:layout_marginEnd="4sp"
+                android:src="@color/light_purple"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/pinkColor"
+                app:layout_constraintTop_toBottomOf="@+id/titleEditLayout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/search_background"
+            android:layout_marginTop="160sp"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/EditTextSearch"
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/noteDetailText"
+                    android:textSize="20sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="#575757"
+                    android:fontFamily="@font/dosis_medium"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/updateNoteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16sp"
+                android:backgroundTint="@color/fab_color"
+                android:contentDescription="TODO"
+                android:src="@drawable/update"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
