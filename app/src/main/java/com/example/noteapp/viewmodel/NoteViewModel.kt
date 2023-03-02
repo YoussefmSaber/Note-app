@@ -32,4 +32,10 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
         val note = repository.getNoteById(id)
         emit(note)
     }
+
+    fun updateNote(note: Note) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.updateNote(note)
+        }
+    }
 }

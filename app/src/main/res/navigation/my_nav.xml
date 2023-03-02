@@ -38,7 +38,7 @@
         android:name="com.example.noteapp.fragments.updatenote.UpdateNotesFragment"
         android:label="UpdateNotesFragment" >
         <action
-            android:id="@+id/action_updateNotesFragment_to_MainPageFragment"
+            android:id="@+id/UpdateNote2MainPage"
             app:destination="@id/MainPageFragment" />
         <argument
             android:name="noteId"

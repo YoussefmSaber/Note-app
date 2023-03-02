@@ -15,4 +15,8 @@ class NoteRepository(private val noteDao: NoteDao) {
     fun getNoteById(id: Int): Note{
         return noteDao.getNoteById(id)
     }
+
+    suspend fun updateNote(note: Note) {
+        noteDao.updateNote(note)
+    }
 }
