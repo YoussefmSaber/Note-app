@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/AddingNotesFragment">
+    app:startDestination="@id/MainPageFragment">
 
     <fragment
         android:id="@+id/MainPageFragment"
@@ -12,10 +12,18 @@
         tools:layout="@layout/fragment_main_page" >
         <action
             android:id="@+id/MainPage2AddNote"
-            app:destination="@id/AddingNotesFragment" />
+            app:destination="@id/AddingNotesFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
         <action
             android:id="@+id/MainPage2UpdateNote"
-            app:destination="@id/UpdateNotesFragment" />
+            app:destination="@id/UpdateNotesFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/AddingNotesFragment"
@@ -24,7 +32,10 @@
         tools:layout="@layout/fragment_adding_notes" >
         <action
             android:id="@+id/AddingNote2MainPage"
-            app:destination="@id/MainPageFragment" />
+            app:destination="@id/MainPageFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/MainPageFragment" />
     </fragment>
     <fragment
         android:id="@+id/UpdateNotesFragment"
@@ -33,6 +44,9 @@
         tools:layout="@layout/fragment_update_notes" >
         <action
             android:id="@+id/UpdateNote2MainPage"
-            app:destination="@id/MainPageFragment" />
+            app:destination="@id/MainPageFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/MainPageFragment" />
     </fragment>
 </navigation>

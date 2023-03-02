@@ -30,10 +30,10 @@
         <item name="boxCornerRadiusTopStart">10dp</item>
         <item name="boxStrokeWidth">0dp</item>
         <item name="boxStrokeColor">@android:color/transparent</item>
-        <item name="boxBackgroundColor">@android:color/transparent</item>
+        <item name="boxBackgroundColor">@color/white</item>
         <item name="android:textColorHint">#C1C1C1</item>
         <item name="hintTextColor">#457b9d</item>
         <item name="boxStrokeWidthFocused">0dp</item>
-        <item name="android:elevation">20sp</item>
+        <item name="android:elevation">10sp</item>
     </style>
 </resources>
