@@ -77,7 +77,8 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="end"
                     android:padding="0sp"
-                    android:src="@drawable/light_green_mark" />
+                    android:src="@drawable/light_green_mark"
+                    app:MarkColor="@{note}"/>
             </FrameLayout>
 
         </com.google.android.material.card.MaterialCardView>
