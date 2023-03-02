@@ -18,12 +18,8 @@
             app:popEnterAnim="@android:anim/fade_in"
             app:popExitAnim="@android:anim/fade_out" />
         <action
-            android:id="@+id/MainPage2UpdateNote"
-            app:destination="@id/UpdateNotesFragment"
-            app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out"
-            app:popEnterAnim="@android:anim/fade_in"
-            app:popExitAnim="@android:anim/fade_out" />
+            android:id="@+id/action_MainPageFragment_to_updateNotesFragment"
+            app:destination="@id/updateNotesFragment" />
     </fragment>
     <fragment
         android:id="@+id/AddingNotesFragment"
@@ -38,15 +34,14 @@
             app:popUpTo="@id/MainPageFragment" />
     </fragment>
     <fragment
-        android:id="@+id/UpdateNotesFragment"
+        android:id="@+id/updateNotesFragment"
         android:name="com.example.noteapp.fragments.updatenote.UpdateNotesFragment"
-        android:label="fragment_update_notes"
-        tools:layout="@layout/fragment_update_notes" >
+        android:label="UpdateNotesFragment" >
         <action
-            android:id="@+id/UpdateNote2MainPage"
-            app:destination="@id/MainPageFragment"
-            app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out"
-            app:popUpTo="@id/MainPageFragment" />
+            android:id="@+id/action_updateNotesFragment_to_MainPageFragment"
+            app:destination="@id/MainPageFragment" />
+        <argument
+            android:name="noteId"
+            app:argType="integer" />
     </fragment>
 </navigation>

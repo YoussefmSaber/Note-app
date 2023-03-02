@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F7FBFB"
+    android:orientation="vertical"
     tools:context=".fragments.mainscreen.MainPageFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/appNameTitle"
             android:layout_width="wrap_content"
@@ -43,9 +45,9 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/searchBarEditText"
                 android:layout_width="match_parent"
-                android:inputType="text"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/dosis_medium"
+                android:inputType="text"
                 android:textColor="@color/appname"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -65,14 +67,13 @@
         android:id="@+id/addNoteBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
         android:layout_margin="16sp"
         android:backgroundTint="@color/fab_color"
-        android:src="@drawable/ic_add"
-        android:layout_gravity="bottom|end"
         android:focusable="true"
+        android:src="@drawable/ic_add"
         app:borderWidth="0sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 
 </FrameLayout>

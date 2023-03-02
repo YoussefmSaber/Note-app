@@ -3,6 +3,7 @@ package com.example.noteapp.viewmodel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.noteapp.model.Note
 import com.example.noteapp.database.NoteDatabase
