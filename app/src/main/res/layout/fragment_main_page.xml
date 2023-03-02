@@ -20,57 +20,23 @@
             android:layout_height="wrap_content"
             android:layout_margin="20sp"
             android:fontFamily="@font/dosis_semibold"
-            android:text="My notes"
+            android:text="@string/my_notes"
             android:textColor="@color/appname"
-            android:textSize="28sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="32sp" />
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16sp"
-            app:queryHint="Search here"
             android:background="@drawable/search_background"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:elevation="20sp"/>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/searchBarLayout"
-            style="@style/EditTextSearch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16sp"
-            android:background="@drawable/note_detail_background"
-            android:hint="Search here"
-            android:textColorHint="#C1C1C1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/appNameTitle"
-            app:startIconDrawable="@drawable/ic_search"
-            android:visibility="gone">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/searchBarEditText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/dosis_medium"
-                android:inputType="text"
-                android:textColor="@color/appname"
-                android:textSize="20sp" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:elevation="5sp"
+            app:queryHint="Search here" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/notesRecycleView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/searchBarLayout"
             tools:listitem="@layout/note_item" />
 
     </LinearLayout>
@@ -84,8 +50,6 @@
         android:backgroundTint="@color/fab_color"
         android:focusable="true"
         android:src="@drawable/ic_add"
-        app:borderWidth="0sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:borderWidth="0sp" />
 
 </FrameLayout>
