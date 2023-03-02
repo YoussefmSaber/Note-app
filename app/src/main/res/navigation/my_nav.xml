@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/MainPageFragment"
-        android:name="com.example.noteapp.Fragment.MainPageFragment"
+        android:name="com.example.noteapp.fragments.mainscreen.MainPageFragment"
         android:label="fragment_main_page"
         tools:layout="@layout/fragment_main_page" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/AddingNotesFragment"
-        android:name="com.example.noteapp.Fragment.AddingNotesFragment"
+        android:name="com.example.noteapp.fragments.addnote.AddingNotesFragment"
         android:label="fragment_adding_notes"
         tools:layout="@layout/fragment_adding_notes" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/UpdateNotesFragment"
-        android:name="com.example.noteapp.Fragment.UpdateNotesFragment"
+        android:name="com.example.noteapp.fragments.updatenote.UpdateNotesFragment"
         android:label="fragment_update_notes"
         tools:layout="@layout/fragment_update_notes" >
         <action

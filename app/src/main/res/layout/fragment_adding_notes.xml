@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/page_color"
-    tools:context=".Fragment.AddingNotesFragment">
+    tools:context=".fragments.addnote.AddingNotesFragment">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -27,6 +28,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/newNoteTitleText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
@@ -43,7 +45,7 @@
                 android:layout_marginStart="32sp"
                 android:layout_marginTop="16sp"
                 android:layout_marginEnd="4sp"
-                android:src="@color/light_blue"
+                android:src="@drawable/light_blue_mark_notselected"
                 app:layout_constraintEnd_toStartOf="@+id/orangeColor"
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintHorizontal_chainStyle="packed"
@@ -57,8 +59,7 @@
                 android:layout_marginStart="4sp"
                 android:layout_marginTop="16sp"
                 android:layout_marginEnd="4sp"
-                android:padding="25sp"
-                android:src="@color/light_orange"
+                android:src="@drawable/light_orange_mark_notselected"
                 app:layout_constraintEnd_toStartOf="@id/greenColor"
                 app:layout_constraintStart_toEndOf="@id/blueColor"
                 app:layout_constraintTop_toBottomOf="@+id/titleEditLayout" />
@@ -70,7 +71,7 @@
                 android:layout_marginStart="4sp"
                 android:layout_marginTop="16sp"
                 android:layout_marginEnd="4sp"
-                android:src="@color/light_green"
+                android:src="@drawable/light_green_mark_notselected"
                 app:layout_constraintEnd_toStartOf="@id/pinkColor"
                 app:layout_constraintStart_toEndOf="@id/orangeColor"
                 app:layout_constraintTop_toBottomOf="@+id/titleEditLayout" />
@@ -82,7 +83,7 @@
                 android:layout_marginStart="4sp"
                 android:layout_marginTop="16sp"
                 android:layout_marginEnd="4sp"
-                android:src="@color/light_pink"
+                android:src="@drawable/light_pink_mark_notselected"
                 app:layout_constraintEnd_toStartOf="@id/purpleColor"
                 app:layout_constraintStart_toEndOf="@id/greenColor"
                 app:layout_constraintTop_toBottomOf="@+id/titleEditLayout" />
@@ -94,34 +95,37 @@
                 android:layout_marginStart="4sp"
                 android:layout_marginTop="16sp"
                 android:layout_marginEnd="4sp"
-                android:src="@color/light_purple"
+                android:src="@drawable/light_purple_mark_notselected"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/pinkColor"
                 app:layout_constraintTop_toBottomOf="@+id/titleEditLayout" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:background="@drawable/search_background"
+            android:layout_height="match_parent"
             android:layout_marginTop="160sp"
-            android:layout_height="match_parent">
+            android:background="@drawable/search_background">
 
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/EditTextSearch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                style="@style/EditTextSearch"
-                app:layout_constraintVertical_bias="0"
-                app:layout_constraintBottom_toBottomOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0">
+
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/newNoteDetailText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="20sp"
                     android:background="@android:color/transparent"
+                    android:fontFamily="@font/dosis_medium"
                     android:textColor="#575757"
-                    android:fontFamily="@font/dosis_medium"/>
+                    android:textSize="20sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -131,6 +135,7 @@
                 android:layout_margin="16sp"
                 android:backgroundTint="@color/fab_color"
                 android:contentDescription="TODO"
+                android:focusable="true"
                 android:src="@drawable/save"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />

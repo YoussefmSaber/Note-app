@@ -6,7 +6,7 @@
 
     android:layout_height="match_parent"
     android:background="#F7FBFB"
-    tools:context=".Fragment.MainPageFragment">
+    tools:context=".fragments.mainscreen.MainPageFragment">
 
     <TextView
         android:id="@+id/appNameTitle"
@@ -62,6 +62,7 @@
         android:layout_margin="16sp"
         android:backgroundTint="@color/fab_color"
         android:src="@drawable/ic_add"
+        android:focusable="true"
         app:borderWidth="0sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
