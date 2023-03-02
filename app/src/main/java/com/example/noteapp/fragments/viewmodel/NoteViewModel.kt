@@ -1,10 +1,10 @@
-package com.example.noteapp.viewmodel
+package com.example.noteapp.fragments.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.*
-import com.example.noteapp.model.Note
+import com.example.noteapp.database.model.Note
 import com.example.noteapp.database.NoteDatabase
-import com.example.noteapp.repository.NoteRepository
+import com.example.noteapp.database.repository.NoteRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -37,5 +37,9 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.updateNote(note)
         }
+    }
+
+    fun searchDatabase(searchQuery: String): LiveData<List<Note>> {
+        return repository.searchDatabase(searchQuery).asLiveData()
     }
 }

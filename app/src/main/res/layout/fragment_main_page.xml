@@ -28,19 +28,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16sp"
+            app:queryHint="Search here"
+            android:background="@drawable/search_background"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:elevation="20sp"/>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/searchBarLayout"
             style="@style/EditTextSearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16sp"
-            android:background="@drawable/search_background"
+            android:background="@drawable/note_detail_background"
             android:hint="Search here"
             android:textColorHint="#C1C1C1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/appNameTitle"
-            app:startIconDrawable="@drawable/ic_search">
+            app:startIconDrawable="@drawable/ic_search"
+            android:visibility="gone">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/searchBarEditText"

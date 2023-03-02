@@ -12,8 +12,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.noteapp.R
-import com.example.noteapp.model.Note
-import com.example.noteapp.viewmodel.NoteViewModel
+import com.example.noteapp.database.model.Note
+import com.example.noteapp.fragments.viewmodel.NoteViewModel
 import com.example.noteapp.databinding.FragmentAddingNotesBinding
 
 

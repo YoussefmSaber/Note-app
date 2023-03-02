@@ -1,10 +1,10 @@
-package com.example.noteapp.utils
+package com.example.noteapp.fragments.utils
 
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.example.noteapp.R
-import com.example.noteapp.model.Note
+import com.example.noteapp.database.model.Note
 
 @BindingAdapter("NoteTitle")
 fun TextView.setNoteTitle(item: Note?) {

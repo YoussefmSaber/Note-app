@@ -19,7 +19,11 @@
             app:popExitAnim="@android:anim/fade_out" />
         <action
             android:id="@+id/action_MainPageFragment_to_updateNotesFragment"
-            app:destination="@id/updateNotesFragment" />
+            app:destination="@id/updateNotesFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/AddingNotesFragment"
@@ -39,7 +43,9 @@
         android:label="UpdateNotesFragment" >
         <action
             android:id="@+id/UpdateNote2MainPage"
-            app:destination="@id/MainPageFragment" />
+            app:destination="@id/MainPageFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
         <argument
             android:name="noteId"
             app:argType="integer" />

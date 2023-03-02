@@ -107,7 +107,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="160sp"
-            android:background="@drawable/search_background">
+            android:background="@drawable/note_detail_background">
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/EditTextSearch"

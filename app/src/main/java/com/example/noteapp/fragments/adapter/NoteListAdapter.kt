@@ -1,4 +1,4 @@
-package com.example.noteapp.adapter
+package com.example.noteapp.fragments.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.noteapp.model.Note
+import com.example.noteapp.database.model.Note
 import com.example.noteapp.databinding.NoteItemBinding
 import com.example.noteapp.fragments.mainscreen.MainPageFragmentDirections
 

@@ -1,4 +1,4 @@
-package com.example.noteapp.model
+package com.example.noteapp.database.model
 
 import android.os.Parcelable
 import androidx.room.Entity

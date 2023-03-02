@@ -7,14 +7,13 @@
 
         <variable
             name="note"
-            type="com.example.noteapp.model.Note" />
+            type="com.example.noteapp.database.model.Note" />
 
     </data>
 
     <LinearLayout
         android:id="@+id/noteItemLayout"
         android:layout_width="match_parent"
-        android:background="@color/white"
         android:layout_height="wrap_content">
 
         <com.google.android.material.card.MaterialCardView
