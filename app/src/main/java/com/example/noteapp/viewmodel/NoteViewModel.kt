@@ -1,10 +1,7 @@
 package com.example.noteapp.viewmodel
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.example.noteapp.model.Note
 import com.example.noteapp.database.NoteDatabase
 import com.example.noteapp.repository.NoteRepository
@@ -29,5 +26,10 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.addNote(note)
         }
+    }
+
+    fun getNoteById(id: Int): LiveData<Note> = liveData(Dispatchers.IO) {
+        val note = repository.getNoteById(id)
+        emit(note)
     }
 }

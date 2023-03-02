@@ -11,4 +11,8 @@ class NoteRepository(private val noteDao: NoteDao) {
     suspend fun addNote(note: Note) {
         noteDao.addNote(note)
     }
+
+    fun getNoteById(id: Int): Note{
+        return noteDao.getNoteById(id)
+    }
 }
